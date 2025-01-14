@@ -1,1 +1,1 @@
-Sitemap: https://analyseR/sitemap.xml
+Sitemap: https://lafagedenis.github.io/ADNS/sitemap.xml
