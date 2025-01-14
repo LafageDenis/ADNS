@@ -26,10 +26,6 @@ website:
       - text: "Contact"
         href: contact.qmd
         icon: mail
-      - text: "Blog"
-        href: blog.qmd
-      - icon: rss
-        href: blog.xml
   page-footer:
     left: "© Copyright 2024 Denis Lafage. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0.\\
     Site powered by the almighty R and Quarto"

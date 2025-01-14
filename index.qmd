@@ -17,8 +17,6 @@ about:
     - text: Email
       icon: email 
       url: "mailto:lafage.denis@gmail.com"
-    - text: Blog
-      url: "blog.html"
     - text: CV
       url: "cv.pdf"
 comments: false
@@ -35,7 +33,7 @@ Consultez la page détaillant les [prestations](prestations)\
 
 Ecologue de formation, je possède un double parcours professionnel de responsable scientifique au sein d'organismes œuvrant pour la protection de la nature et de chercheur en écologie. Ce parcours m'a amené à me spécialiser dans l'analyse et la gestion de données à composantes spatiale.
 
-Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qmd) proposées mais aussi une liste de [mes publications](papers), [mon CV](cv.pdf), ainsi qu'un [blog sur R et Julia](blog.html).
+Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qmd) proposées mais aussi une liste de [mes publications](papers) et [mon CV](cv.pdf).
 
 <p>
 
