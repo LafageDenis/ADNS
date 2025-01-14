@@ -1,0 +1,87 @@
+---
+title: "Prestations"
+format: 
+  html:
+    toc: true
+    toc-location: left
+    toc-title: 'Sur cette page'
+---
+
+# Approche générale
+::: {.column-margin}
+![](./img/r_julia.png){fig-align="center" height=150} 
+:::
+Utilisant depuis près de 15 ans le langage {{< fa brands r-project >}}, ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par Julia. \
+
+# Analyse de données
+  
+::: {.column-margin}
+![](./img/analyses_2.png){fig-align="center"} 
+:::
+
+Dans la cadre de prestations d'analyse de données, plusieurs scripts R vous seront fournis pour les différentes étapes de l'analyse :
+
+-   import des données
+
+-   nettoyage et mise en forme des données
+
+-   analyses statistiques (fréquentistes ou Bayesiennes, multivariées...)
+
+-   production de figures (graphiques et cartes statiques ou interactives)
+
+
+
+:::{.callout-tip}
+# Selon le vieil adage : 
+A partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, 
+il faut faire un package. 
+:::
+
+Ainsi dès que cela sera nécessaire une fonction accompagnée de sa documentation et 
+de ses tests unitaires sera créée afin de simplifier le code et de faciliter la 
+réutilisation des scripts par le client. Ceci constitue la prestation minimale 
+proposée.  
+La création de packages dédiés est réalisée en option. 
+
+# Automatisation de rapports et dashboards
+
+Vous produisez des rapports de synthèse mensuels? Vous réalisez des rapports
+d'activité? Ces documents suivent souvent le même squelette.  
+Grâce à R + Quarto nous pouvons automatiser la production de ces documents
+(éventuellement sous forme de package) afin que vous n'ayez plus qu'à vous concentrer 
+sur l'interprétation des résultats.  
+Grâce à Quarto ces documents peuvent prendre la forme de :
+
+-   rapports ({{< fa file-word >}}, {{< fa file-pdf >}} ...), 
+
+-   présentations ({{< fa file-powerpoint >}}),
+
+-   dashboards.   
+
+# Bases de données
+
+::: {.column-margin}
+![](./img/pgsql_duckdb.png){fig-align="center"} 
+:::
+
+Gérant depuis plusieurs années des bases de données naturalistes, 
+je propose aussi de mettre en oeuvre des analyses 'attaquant' directement des bases de données 
+PostgresSQL/PostGIS ou DuckDB (pour plus de vitesse et se débarasser de l'aspect
+serveur).  
+Les requêtes peuvent être effectuer en SQL ou en R selon vos préférences.  
+
+
+# Création de package
+:::{.column-margin}
+![](./img/hex_adns_h.png){fig-align="center" height=150} 
+:::
+
+Lorsque la complexité des analyses/rapports/présentations/dashboards s'accroît, 
+il est très vite indispensable de les intègrer dans un package.  
+Je vous propose donc de créer un package qui rassemblera non seulement toutes les
+fonctions qui vous sont nécessaires mais aussi une documentation et des tests unitaires.  
+Si vous ne disposez pas des connaissances nécessaires au maintien du package une prestation
+spécifique vous est par ailleur proposée.  
+
+Pour obtenir un devis sur mesure rendez-vous sur la page de [contact](contact.qmd).
+

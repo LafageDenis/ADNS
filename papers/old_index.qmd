@@ -1,0 +1,80 @@
+<html>
+<head><title>Articles scientifiques</title></head>
+<body>
+    <h2>Articles scientifiques</h2>
+    Cliquez sur "[PDF]" pour télécharger chaque article.
+    <hr>
+    <p></a></p>
+    </p>
+    <h3>2024</h3>
+    <p>Ameline, C., <strong>Lafage, D.</strong>, Vernon, P., Hedde, M., Petillon, J. 2024. Spiders bring new insight into the eco-evolutionary drivers of body size variation and sexual size dimorphism in arthropods. <em>bioRXiv</em> <a
+    href="https://doi.org/10.1101/2024.10.30.621136">https://doi.org/10.1101/2024.10.30.621136</a> <a href='Ameline_BioRxiv2024.pdf'>[PDF]</a>
+    </p>
+    <h3>2023</h3>
+    <p>Marker, J., Bergman, E., Bowes, R. <strong>Lafage, D.</strong> 2023. Small stream predators rely heavily on terrestrial matter energy input in the fall, regardless of riparian buffer size. <em>Food Webs</em> <a
+    href="https://doi.org/10.1016/j.fooweb.2023.e00302">https://doi.org/10.1016/j.fooweb.2023.e00302</a> <a href='Marker_FoodWebs2023.pdf'>[PDF]</a>
+    </p>
+    <p>Marker, J., Erlandsson, A., Bergman, E., <strong>Lafage, D.</strong> 2023. Riparian clear-cuts affect the source of riparian spider prey depending on capture stategy. Under review.
+    </p>
+    <p>Marker, J., <strong>Lafage, D.</strong>, Bergman, E., Erlandsson, A. 2023 Molecular gut content analysis results are determined by various biotic factors in wolf spiders (Aranae: Lycosidae). Under review.
+    </p>
+    <h3>2022</h3>
+    <p>Marker, J., Bergman, E., Eckstein, L., <strong>Lafage, D.</strong> 2022. Forested riparian buffer environmental variables are more important than size for species functional diversity in production forests. <em>Forest Ecology and Management</em> <a
+    href="https://doi.org/10.1016/j.foreco.2022.120599">https://doi.org/10.1016/j.foreco.2022.120599</a> <a href='Marker_ForestEcol2022.pdf'>[PDF]</a>
+    </p>
+    <p>Monsimet, J., Pétillon, J. Devineau, O., Gardoni, N., Bataillard, L., <strong>Lafage, D.</strong> 2022. Contrasted propensity for waterborne and airborne dispersal between two closely related semi‐aquatic spider species. <em>Insect Conservation and Diversity</em> <a href="https://doi.org/10.1111/icad.12596">https://doi.org/10.1111/icad.12596</a> <a href='Insect Conserv Diversity - 2022 - Monsimet - Contrasted propensity for waterborne and airborne dispersal between two.pdf'>[PDF]</a>
+    </p>
+    <p>Dickel, L., Monsimet, J., <strong>Lafage, D.</strong>, Devineau, O. 2022. Characterization of habitat requirements of European fishing spiders. <em>PeerJ</em> e12806. <a href="https://doi.org/10.7717/peerj.12806">https://doi.org/10.7717/peerj.12806</a> <a href='peerj-12806.pdf'>[PDF]</a>
+    </p>
+    <p>Marker, J., <strong>Lafage, D.</strong>Bergman, E., Bowes, R.E. 2022. Greater than the sum of your parts: Nonlethal stable isotope sampling methods in spiders. <em>Ecosphere</em> 13(1) e3903. <a href="https://doi.org/10.1002/ecs2.3903">https://doi.org/10.1002/ecs2.3903</a> <a href='Ecosphere_2022 - Marker.pdf'>[PDF]</a>
+    </p>
+    <h3>2021</h3>
+    <p>Mammola, S., Pétillon, J., Hacala, A., Monsimet, J., Marti, S-L., Cardoso, P., <strong>Lafage. D.</strong> 2021. Challenges and opportunities of species distribution modelling of terrestrial arthropod predators.<em> Diversity and distributions</em> 27(12) 2596-2614. <a href="https://doi.org/10.1111/ddi.13434">https://doi.org/10.1111/ddi.13434</a> <a href='Diversity and Distributions - 2021 - Mammola - Challenges and opportunities of species distribution modelling of.pdf'>[PDF]</a>
+    </p>
+    <p>Pekár, S. et al. 2021. The World Spider Trait database: a centralized global open repository for curated data on spider traits. <em>Database</em> 2021 baab064. <a href="https://doi.org/10.1093/database/baab064">https://doi.org/10.1093/database/baab064</a> <a href='baab064.pdf'>[PDF]</a>
+    </p>
+    <p>Hacala, A., <strong>Lafage, D.</strong>, Prinzing, A., Sawtschuk, J., Pétillon, J. 2021. Drivers of taxonomic, functional and phylogenetic diversities in dominant ground-dwelling arthropods of coastal heathlands.<em>Oecologia</em> 197(2) 511-522. <a href="https://doi.org/10.1007/s00442-021-05032-4">https://doi.org/10.1007/s00442-021-05032-4</a> <a href='Drivers_of_taxonomic_functional_and_phylogenetic_d.pdf'>[PDF]</a>
+    </p>
+    <p>Ridel, A., <strong>Lafage, D.</strong>, Devogel, P., Lacoue-Labarthe, T., Petillon, J. 2021. Habitat filtering differentially modulates phylogenetic and functional diversity relationships between predatory arthropods. <em>Royal Society open science</em> 8(6) 202093. <a href="https://doi.org/10.1098/rsos.202093">https://doi.org/10.1098/rsos.202093</a> <a href='rsos.202093.pdf'>[PDF]</a>
+    </p>
+    <p>Monsimet, J., Colinet, H., Devineau, O., <strong>Lafage, D.</strong>, Pétillon, J. 2021. Biogeographic position and body size jointly set lower thermal limits of wandering spiders. <em>Ecology and evolution</em> 11(7) 3347-3356. <a href="https://doi.org/10.1002/ece3.7286">https://doi.org/10.1002/ece3.7286</a> <a href='Ecology and Evolution - 2021 - Monsimet - Biogeographic position and body size jointly set lower thermal limits of.pdf'>[PDF]</a>
+    </p>
+    <p>Monsimet, J. Colinet, H., <strong>Lafage, D.</strong>, Devineau, O., Pétillon, J. 2021. Replication Data for: Biogeographic position and body size jointly set lower thermal limits of wandering spiders. <em>DataverseNO</em>
+    </p>
+    <p><strong>Lafage, D.</strong>, Carpentier, A., Duhamel, S., Dupuy, C., Feunteun, E., Lesourd, S., Pétillon, J. 2021. Site Characteristics More Than Vegetation Type Influence Food Web Structure of Intertidal Salt Marshes. <em>Frontiers in Marine Science</em> 459. <a href="https://doi.org/10.3389/fmars.2021.669759">https://doi.org/10.3389/fmars.2021.669759</a> <a href='fmars-08-669759.pdf'>[PDF]</a>
+    </p>
+    <h3>2020</h3>
+    <p>Monsimet, J., Devineau, O., Petillon, J., <strong>Lafage, D.</strong> 2020. Explicit integration of dispersal-related metrics improves predictions of SDM in predatory arthropods. <em>Scientific Reports</em> 10(1) 1-12. <a href="https://doi.org/10.1038/s41598-020-73262-2">https://doi.org/10.1038/s41598-020-73262-2</a> <a href='s41598-020-73262-2.pdf'>[PDF]</a>
+    </p>
+    <p><strong>Lafage, D.</strong>, Elbrecht, V., Cuff, J.P., Steinke, D., Hambäck, P.A., Erlandsson, A. 2020. A new primer for metabarcoding of spider gut contents. <em>Environmenral DNA</em> 2(2) 234-243. <a href="https://doi.org/10.1002/edn3.62">https://doi.org/10.1002/edn3.62</a> <a href='Environmental DNA - 2019 - Lafage - A new primer for metabarcoding of spider gut contents.pdf'>[PDF]</a>
+    </p>
+    <h3>2019</h3>
+    <p><strong>Lafage, D.</strong>, Djoudi, E.A., Perrin, G., Gallet, S., Pétillon, J. 2019. Responses of ground-dwelling spider assemblages to changes in vegetation from wet oligotrophic habitats of Western France. <em>Arthropod-Plant Interactions</em> 13(4) 653-662. <a href="https://doi.org/10.1007/s11829-019-09685-0">https://doi.org/10.1007/s11829-019-09685-0</a> <a href='s11829-019-09685-0.pdf'>[PDF]</a>
+    </p>
+    <p><strong>Lafage, D.</strong>, Bergman, E., Eckstein, R.L., Österling, E.M., Sadler, J.P., Piccolo, J.J. 2019. Local and landscape drivers of aquatic‐to‐terrestrial subsidies in riparian ecosystems: A worldwide meta‐analysis. <em>Ecosphere</em> 10(4) e02697. <a href="https://doi.org/10.1002/ecs2.2697">https://doi.org/10.1002/ecs2.2697</a> <a href='Ecosphere - 2019 - Lafage - Local and landscape drivers of aquatic‐to‐terrestrial subsidies in riparian ecosystems a.pdf'>[PDF]</a>
+    </p>
+    <h3>2018</h3>
+    <p>Pétillon, J., François, A., <strong>Lafage, D.</strong> 2018. Short–term effects of horse grazing on spider assemblages of a dry meadow (Western France). <em>Animal Biodiversity and Conservation</em> 41(1) 19-32. <a href="https://doi.org/10.32800/abc.2018.41.0019">https://doi.org/10.32800/abc.2018.41.0019</a> <a href='1687-Petillonetal-ABC.pdf'>[PDF]</a>
+    </p>
+    <h3>2016</h3>
+    <p><strong>Lafage D.</strong> & Pétillon, J. 2016. Relative importance of management and natural flooding on spider, carabid and plant assemblages in extensively used grasslands along the Loire. <em>Basic and Applied Ecology</em> 17(6) 535-545. <a href="https://doi.org/10.1016/j.baae.2016.04.002">https://doi.org/10.1016/j.baae.2016.04.002</a> <a href='48155584.pdf'>[PDF]</a>
+    </p>
+    <h3>2015</h3>
+    <p><strong>Lafage, D</strong>, Sibelle, C., Secondi, J., Canard, A., Pétillon, J. 2015. Short‐term resilience of arthropod assemblages after spring flood, with focus on spiders (Arachnida: Araneae) and carabids (Coleoptera: Carabidae). <em>Ecohydrology</em> 8(8) 1584-1599. <a href="https://doi.org/10.1002/eco.1606">https://doi.org/10.1002/eco.1606</a> <a href='lafage_2015b.pdf'>[PDF]</a>
+    </p>
+    <p><strong>Lafage, D.</strong>, Maugenest, S., Bouzillé, J-B., Pétillon, J. 2015. Disentangling the influence of local and landscape factors on alpha and beta diversities: opposite response of plants and ground-dwelling arthropods in wet meadows. <em>Ecological Research</em> 30(6) 1025-1035. <a href="https://doi.org/10.1007/s11284-015-1304-0">https://doi.org/10.1007/s11284-015-1304-0</a> <a href='lafage_2015.pdf'>[PDF]</a>
+    </p>
+    <h3>2014</h3>
+    <p><strong>Lafage, D.</strong>, Secondi, J., Georges, A., Bouzillé, J-B., Pétillon, J. 2014. Satellite‐derived vegetation indices as surrogate of species richness and abundance of ground beetles in temperate floodplains. <em>Insect Conservation and Diversity</em> 7(4) 327-333. <a href="https://doi.org/10.1111/icad.12056">https://doi.org/10.1111/icad.12056</a> <a href='2013LafageInsectdiversityandconservation.pdf'>[PDF]</a>
+    </p>
+    <p><strong>Lafage D.</strong> & Pétillon, J. 2014. Impact of cutting date on carabids and spiders in a wet meadow. <em>Agriculture, ecosystems & environment</em> 185 1-8. <a href="https://doi.org/10.1016/j.agee.2013.11.027">https://doi.org/10.1016/j.agee.2013.11.027</a> <a href='lafage_2014.pdf'>[PDF]</a>
+    </p>
+    <h3>2013</h3>
+    <p>Varet, M., Burel, F., <strong>Lafage, D.</strong>, Pétillon, J. 2013Age-dependent colonization of urban habitats: a diachronic approach using carabid beetles and spiders. <em>Animal Biology</em> 63(3) 257-269.<a href="https://doi.org/10.1163/15707563-00002410">https://doi.org/10.1163/15707563-00002410</a> <a href='AB_2013.pdf'>[PDF]</a>
+    </p>
+    <h3>2004</h3>
+    <p>Laffaille, P., Briand, C., Fatin, D., <strong>Lafage, D.</strong>, Lasne, E. Point sampling the abundance of European eel (Anguilla anguilla) in freshwater areas. <em>Archiv fur Hydrobiologie</em> 162(1) 91-98. <a href="https://doi.org/10.1127/0003-9136/2005/0162-0091">https://doi.org/10.1127/0003-9136/2005/0162-0091</a> <a href='Point_sampling_the_abundance_of_European_eel_Angui.pdf'>[PDF]</a>
+    </p>
+    <p>
+</body>
+</html>

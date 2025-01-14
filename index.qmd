@@ -1,0 +1,52 @@
+---
+title: ""
+subtitle: "Analyses de Données Naturalistes Spatiales"
+image: ADNS.png
+about:
+  template: trestles
+  links:
+    - text: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/denis-lafage-79b18145/"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/LafageDenis"
+    - text: Gitlab
+      icon : gitlab
+      url: "https://gitlab.com/DenisLafage"
+    - text: Email
+      icon: email 
+      url: "mailto:lafage.denis@gmail.com"
+    - text: Blog
+      url: "blog.html"
+    - text: CV
+      url: "cv.pdf"
+comments: false
+---
+
+::: column-page
+## L'entreprise
+
+@ADNS vous propose d'analyser vos données naturalistes (qu'elles soient spatiales ou non) et de développer des outils de reporting automatique de ces dernières.\
+Vous disposez de jeux de données d'inventaires, de suivis ou d'expertises. Vous souhaitez 'nettoyer' ces données, les analyser, automatiser la rédaction de rapports d'analyse. Vous êtes au bon endroit.\
+Consultez la page détaillant les [prestations](prestations)\
+
+## Bio
+
+Ecologue de formation, je possède un double parcours professionnel de responsable scientifique au sein d'organismes œuvrant pour la protection de la nature et de chercheur en écologie. Ce parcours m'a amené à me spécialiser dans l'analyse et la gestion de données à composantes spatiale.
+
+Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qmd) proposées mais aussi une liste de [mes publications](papers), [mon CV](cv.pdf), ainsi qu'un [blog sur R et Julia](blog.html).
+
+<p>
+
+</p>
+
+## Formation
+
+Doctorat en écologie \| 2011-2014\
+Master en écologie \| 2008
+
+<p>
+
+</p>
+:::

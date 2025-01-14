@@ -1,0 +1,26 @@
+---
+title: ""
+format: 
+  html:
+    toc: false
+---
+
+# Demande de devis {{< fa file-invoice >}}
+
+## Premier contact
+
+::: {.column-margin}
+![](./img/shake_hands.png){fig-align="center" height=150} 
+:::
+Afin que je puisse vous rapidement si je suis en mesure de satisfaire votre demande, 
+merci de m'adresser un [mail](mailto:lafage.denis@gmail.com) détaillant :  
+ 
+ -  l'objet de l'étude
+ -  le type d'analyses souhaitées
+ -  la taille du jeu de données (en lignes et colonnes)
+ -  si possible un extrait du jeu de données
+ -  le type de rendu attendu (rapport, dashboard, site web, présentation...)
+ -  vos coordonnées (mail, numéro de téléphone)
+ 
+Après étude de votre demande je vous proposerai une visio afin que nous puissions
+définir ensemble la nature exacte de la prestation.

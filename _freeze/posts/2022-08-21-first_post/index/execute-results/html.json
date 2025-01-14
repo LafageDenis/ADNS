@@ -1,0 +1,14 @@
+{
+  "hash": "daa90bb98ce0f64fff8159b105fe4782",
+  "result": {
+    "markdown": "---\ntitle: \"ACP\"\ndescription: \"Analyse en composante principale sous R and Julia\"\nauthor:\n  - name: Denis Lafage\n    url: {}\ndate: \"2022-08-21\"\ncategories: [\"R\", \"Julia\", \"multivariées\"]\n#image: x.png\nformat:\n  html:\n    toc: true\nengine: knitr\n---\n\n\n# Sous R\n\n## Import des données\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(palmerpenguins)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

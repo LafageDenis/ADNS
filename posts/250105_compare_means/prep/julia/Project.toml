@@ -1,0 +1,7 @@
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+HypothesisTests = "09f84164-cd44-5f33-b23f-e6b0d136a0d5"
+PalmerPenguins = "8b842266-38fa-440a-9b57-31493939ab85"
+Pingouin = "61ac1d4c-5a1f-4019-949c-7919748f8c44"
+StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"

@@ -1,0 +1,41 @@
+project:
+  type: website
+  resources:
+    - cv.pdf
+
+website:
+  title: ""
+  site-url: https://analyseR
+  description: "Ananlyses de Données Naturalistes Spatialisées"
+  open-graph:
+    locale: Fr
+  twitter-card:
+    creator: "@ResearchDenis"
+  comments:
+    utterances:
+      repo: LafageDenis/website
+  navbar:
+    logo: "raw_adns_w.png"
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "Prestations"
+        href: prestations.qmd
+      - text: "Articles scientifiques"
+        href: papers
+      - text: "Contact"
+        href: contact.qmd
+        icon: mail
+      - text: "Blog"
+        href: blog.qmd
+      - icon: rss
+        href: blog.xml
+  page-footer:
+    left: "© Copyright 2024 Denis Lafage. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0.\\
+    Site powered by the almighty R and Quarto"
+format:
+  html:
+    theme: [sandstone, _variables.scss]
+    fontcolor: $grey-adns
+    mainfont: Fira Sans
+    css: styles.css

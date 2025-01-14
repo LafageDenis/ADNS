@@ -1,0 +1,11 @@
+{
+  "hash": "683f5dc2276815917ed9398092728528",
+  "result": {
+    "markdown": "---\ntitle: ACP\ndescription: Analyse en composante principale sous R and Julia\nauthor:\n  - name: Denis Lafage\n    url: {}\ndate: '2022-08-21'\ncategories:\n  - R\n  - Julia\n  - multivariées\nformat:\n  html:\n    toc: true\n---\n\n# Sous R\n\n## Import des données\n\n\n```{r}\n#| label: chargement\n#| echo: true\nlibrary(palmerpenguins)\n\n```\n\n\nSous Julia\n\n::: {.cell execution_count=1}\n``` {.julia .cell-code}\nusing Plots\ndisplay(plot(sin, x -> sin(2x), 0, 2))\n```\n\n::: {.cell-output .cell-output-display}\n![](index_files/figure-html/chargement-julia-output-1.svg){#chargement-julia}\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

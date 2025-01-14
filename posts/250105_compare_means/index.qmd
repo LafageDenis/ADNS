@@ -1,0 +1,258 @@
+---
+title: "Comparaison de moyennes"
+description: "La comparaison de moyenne sous R and Julia"
+author:
+  - name: Denis Lafage
+    url: {}
+date: "2022-08-25"
+categories: ["R", "Julia", "moyennes", "statistiques"]
+bibliography: biblio_comparaison_moyennes.bib
+#image: x.png
+format:
+  html:
+    toc: true
+    code-link: true
+    
+---
+
+```{r}
+#| include: false
+library(JuliaCall)
+julia <- julia_setup()
+```
+
+
+:::{.callout-note}
+Pour rappel, je m'efforce dans cette série de posts de prendre comme excuse 
+l'analyse statistique du jeux de données **PalmerPenguins** pour mettre en avant 
+les bases de l'analyse de données sous R. 
+Ces posts ne sont en aucun cas des cours de statistiques !
+
+:::
+
+:::{callout-important}
+Les liens des fonctions appelées sous R pointent vers la documentation de cette 
+dernière. Malheuresement [Quarto](https://quarto.org/) (avec lequel je code ce 
+site) ne génére pas encore les liens pour Julia.
+:::
+
+# Préparation 
+
+Nous allons commencer par charger les packages qui seront nécessaires au 
+chargement et à la manipulation des données, à la réalisation des graphiques et 
+aux analyses statistiques.  
+
+![Artwork by @allison_horst](lter_penguins.png){fig-align="center" height=150} 
+
+## Chargement des packages
+
+::: {.panel-tabset}
+
+## R
+On charge les packages avec la fonction library(). Attention, vous devez les 
+avoir préalablement installés via install.packages("nom_du_package").
+```{r}
+#| message: false
+library(palmerpenguins) # C'est le fameux jeux de données
+library(ggplot2) # Création des graphiques
+library(dplyr) # Manipulation des données
+library(tidyr) # Manipulation des données
+library(nortest) # test de normalité
+```
+
+## Julia
+On charge les package avec using(). Attention, vous devez les avoir préalablement
+installés via pkg : add nom_du_package.
+```{julia}
+using PalmerPenguins # C'est le fameux jeux de données
+using DataFrames # Gestion des DataFrames
+using StatsPlots # Création des graphiques
+using HypothesisTests # tests statistiques
+using Distributions # Lois de distribution 
+```
+:::
+
+---
+nocite: |
+  @Rpkg_palmer, @Rpkg_ggplot2, @Rpkg_dplyr, @Rpkg_tidyr, @Rpkg_nortest,
+---
+
+# Chargement des données
+
+Nous allons utiliser le fameux jeux de données Palmer penguins. Il est packagé 
+dans les deux languages. Les données ont été collectées et mises à disposition 
+par le Docteur K. Gorman et la station Palmer Station (Antarctic). Elles ont 
+fait l'objet d'une publication [@gorman_2014]. Ce dataset contient des mesures 
+morphologiques concernant trois espèces de pinguins de l'Archipel Palmer (Antartic) 
+
+::: {.panel-tabset}
+
+## R
+
+  - Chargeons les données via la fonction data
+```{r}
+data(package = "palmerpenguins") 
+```
+
+  - On peut ensuite obtenir un rapide aperçu grâce à glimpse()
+```{r}
+glimpse(penguins)
+```
+
+  - Enfin, on supprime les lignes avec des valeurs manquantes (ce n'est pas 
+  forcément la meilleur option, on en reparlera dans un article dédié)
+```{r}
+penguins <-penguins %>% 
+  drop_na()
+# vous remarquez le fameux 'pipe' (%>%) qui permet 
+# d’enchaîner les fonctions appliquées. Depuis peu, 
+# R intègre un pipe natif : |>
+```
+
+## Julia
+```{julia}
+#| output: false
+#| echo: false
+ENV["DATADEPS_ALWAYS_ACCEPT"] = true # permet de dire à quarto d'accepter le téléchargement (vous n'en avez pas besoin)
+```
+  - Chargeons les données (PalmerPenguins.load()) et transformons les en 
+  DataFrame
+```{julia}
+#| output: false
+table = PalmerPenguins.load() 
+penguins = DataFrame(table) # on transforme le csv en DataFrame
+```
+
+  - On peut ensuite obtenir un rapide aperçu grâce à describe()
+```{julia}
+describe(penguins) # description des données, c'est l'équivalent de glimpse()
+```
+
+- Enfin, on supprime les lignes avec des valeurs manquantes (ce n'est pas 
+forcément la meilleur option, on en reparlera dans un article dédié)
+```{julia}
+dropmissing!(penguins) # suppression des lignes avec des valeurs manquantes (équivalent de drop_na()). Ici, le ! (bang) permet de modifier le DataFrame en place
+```
+:::
+
+
+# Comparaison des tailles moyennes des becs entre mâles et femelles
+
+Avant de se lancer dans des tests statistiques, il est toujours bon de 
+représenter les données sous forme de graphique. Ici, nous allons réaliser des 
+boxplots. Pour rappel, les boxplots nous donnent la 
+[médiane](https://fr.wikipedia.org/wiki/M%C3%A9diane_(statistiques)) (la ligne 
+horizontale), les 1ers et 3ièmes 
+[quartiles](https://fr.wikipedia.org/wiki/Quartile) (le haut et le bas de la 
+boîte) ainsi que le minimum et maximum (les moustaches). 
+
+:::{.callout-note}
+Nous n'utilisons les boxplots par défaut sans aucune option. La "custumization" 
+des plots sera abordée dans un autre article.
+:::
+
+::: {.panel-tabset}
+## R
+ - On utilise la fonction de ggplot pour définir le jeux de données et les axes 
+ et on ajoute la 'geom' (le type de graphique)
+```{r}
+ggplot(data = penguins, aes(x = sex, y = bill_length_mm)) +
+  geom_boxplot()
+```
+
+## Julia
+```{julia}
+# Ici on profite de la [macro](https://docs.julialang.org/en/v1/manual/metaprogramming/) @df
+# qui nous permet d'appeler les colonnes avec :)
+
+@df penguins boxplot(:sex, :bill_length_mm)
+```
+:::
+
+On voit ici que même si les données sont très hétérogènes (les quartiles, 
+minimum et maximum sont grands), le chevauchement est modéré. Il est donc 
+envisageable de trouver une différence de taille moyenne entre les deux sexes.
+
+# Test de normalité
+
+Avant de se lancer dans le test de comparaison de moyennes, nous devons savoir 
+si nos données sont normales. C'est l'une des hypothèses de base qui nous permet 
+de choisir entre un test paramètrique (si les données sont normales) ou non 
+paramètrique (si elles ne le sont pas).
+
+## Graphiques
+
+Encore une fois, un petit graphique va nous aider...
+
+::: {.panel-tabset}
+
+## R
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, color = sex)) +
+  geom_density() # rien de révolutionnaire, au lieu d'un boxplot on veut une version lissée d'un histogramme
+```
+
+## Julia
+```{julia}
+@df penguins density(:bill_length_mm, group = :sex) # rien de révolutionnaire, au lieu d'un boxplot on veut une version lissée d'un histogramme
+```
+:::
+
+## Test
+
+::: {.panel-tabset}
+
+## R
+```{r}
+with(penguins, tapply(bill_length_mm, sex, ad.test))
+```
+
+## Julia
+```{julia}
+#| message: false
+gp_penguins = groupby(penguins, :sex, sort = true)  
+
+res = combine(gp_penguins, :bill_length_mm => (bill_length_mm -> OneSampleADTest(bill_length_mm, Normal())) => :ADTest)
+
+println(res[1,:])
+
+```
+:::
+
+# Test d'homostédasticité
+::: {.panel-tabset}
+
+## R
+```{r}
+bartlett.test(bill_length_mm ~ sex, data = penguins)
+```
+
+## Julia
+```{julia}
+#| eval: false
+# Pour une raison inconnue une syntaxe indentique à celle utilisée plus bas ne fonctionne pas
+BartlettTest(penguins[penguins.sex .== "male",:bill_length_mm], 
+             penguins[penguins.sex .== "female",:bill_length_mm])
+
+```
+
+:::
+
+# Test de comparaison de moyennes
+
+::: {.panel-tabset}
+
+## R
+```{r}
+t.test(bill_length_mm ~ sex,  data = penguins)
+```
+
+## Julia
+```{julia}
+EqualVarianceTTest(penguins[penguins.sex .== "male",:bill_length_mm], 
+                   penguins[penguins.sex .== "female",:bill_length_mm])
+
+```
+
+:::
+

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>@DNS</title>
+<link>https://analyseR/blog.html</link>
+<atom:link href="https://analyseR/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Ananlyses de Données Naturalistes Spatialisées</description>
+<generator>quarto-1.0.38</generator>
+<lastBuildDate>Wed, 24 Aug 2022 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Comparaison de moyennes</title>
+  <dc:creator>Denis Lafage</dc:creator>
+  <link>https://analyseR/posts/220821_compare_means/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour rappel, je m’efforce dans cette série de posts de prendre comme excuse l’analyse statistique du jeux de données <strong>PalmerPenguins</strong> pour mettre en avant les bases de l’analyse de données sous R. Ces posts ne sont en aucun cas des cours de statistiques ! J’en profite par ailleurs pour me former à Julia et vous trouverez donc pour chaque block de code R, l’équivalent en Julia… lorsque j’ai réussi à le trouver.</p>
+</div>
+</div>
+<div class="{callout-important}">
+<p>Les liens des fonctions appelées sous R pointent vers la documentation de cette dernière. Malheuresement <a href="https://quarto.org/">Quarto</a> (avec lequel je code ce site) ne génére pas encore les liens pour Julia.</p>
+</div>
+<section id="préparation" class="level1">
+<h1>Préparation</h1>
+<p>Nous allons commencer par charger les packages qui seront nécessaires au chargement et à la manipulation des données, à la réalisation des graphiques et aux analyses statistiques.</p>
+<section id="chargement-des-packages" class="level2">
+<h2 class="anchored" data-anchor-id="chargement-des-packages">Chargement des packages</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p>On charge les packages avec la fonction library(). Attention, vous devez les avoir préalablement installé via install.packages(“nom_du_package”).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(palmerpenguins) <span class="co" style="color: #5E5E5E;"># C'est le fameux jeux de données</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(ggplot2) <span class="co" style="color: #5E5E5E;"># Création des graphiques</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;">library</span>(dplyr) <span class="co" style="color: #5E5E5E;"># Manipulation des données</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;">library</span>(tidyr) <span class="co" style="color: #5E5E5E;"># Manipulation des données</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">library</span>(nortest) <span class="co" style="color: #5E5E5E;"># test de normalité</span></span></code></pre></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p>On charge les package avec using(). Attention, vous devez les avoir préalablement installé via pkg : add nom_du_package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><span class="im" style="color: #00769E;">using</span> <span class="bu" style="color: null;">PalmerPenguins</span> <span class="co" style="color: #5E5E5E;"># C'est le fameux jeux de données</span></span>
+<span id="cb2-2"><span class="im" style="color: #00769E;">using</span> <span class="bu" style="color: null;">DataFrames</span> <span class="co" style="color: #5E5E5E;"># Gestion des DataFrames</span></span>
+<span id="cb2-3"><span class="im" style="color: #00769E;">using</span> <span class="bu" style="color: null;">StatsPlots</span> <span class="co" style="color: #5E5E5E;"># Création des graphiques</span></span>
+<span id="cb2-4"><span class="im" style="color: #00769E;">using</span> <span class="bu" style="color: null;">HypothesisTests</span> <span class="co" style="color: #5E5E5E;"># tests statistiques</span></span>
+<span id="cb2-5"><span class="im" style="color: #00769E;">using</span> <span class="bu" style="color: null;">Distributions</span> <span class="co" style="color: #5E5E5E;"># Lois de distribution </span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="chargement-des-données" class="level1">
+<h1>Chargement des données</h1>
+<p>Nous allons utiliser le fameux jeux de données Palmer penguins. Il est packagé dans les deux languages. Les données ont été collectées et mises à disposition par le Docteur K. Gorman et la station Palmer Station (Antarctic). Elles ont fait l’objet d’une publication <span class="citation" data-cites="gorman_2014">(Gorman 2014)</span>. Dans ce dataset,</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
+<ul>
+<li>Chargeons données via la fonction data</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">data</span>(<span class="at" style="color: #657422;">package =</span> <span class="st" style="color: #20794D;">"palmerpenguins"</span>) </span></code></pre></div>
+</div>
+<ul>
+<li>On peut ensuite obtenir un rapide aperçu grâce à glimpse()</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">glimpse</span>(penguins)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+<ul>
+<li>Enfin, on supprime les lignes avec des valeurs manquantes (ce n’est pas forcément la meilleur option, on en reparlera dans un article dédié)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">penguins <span class="ot" style="color: #003B4F;">&lt;-</span>penguins <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb6-2">  <span class="fu" style="color: #4758AB;">drop_na</span>()</span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;"># vous remarquez le fameux 'pipe' (%&gt;%) qui permet </span></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;"># d’enchaîner les fonctions appliquées. Depuis peu, </span></span>
+<span id="cb6-5"><span class="co" style="color: #5E5E5E;"># R intègre un pipe natif : |&gt;</span></span></code></pre></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" aria-labelledby="tabset-2-2-tab">
+<ul>
+<li>Chargeons données (PalmerPenguins.load()) et transformons les en DataFrame</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1">table <span class="op" style="color: #5E5E5E;">=</span> PalmerPenguins.<span class="fu" style="color: #4758AB;">load</span>() </span>
+<span id="cb7-2">penguins <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">DataFrame</span>(table) <span class="co" style="color: #5E5E5E;"># on transforme le csv en DataFrame</span></span></code></pre></div>
+</div>
+<ul>
+<li>On peut ensuite obtenir un rapide aperçu grâce à describe()</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><span class="fu" style="color: #4758AB;">describe</span>(penguins) <span class="co" style="color: #5E5E5E;"># description des données, c'est l'équivalent de glimpse()</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7×7 DataFrame
+ Row │ variable           mean     min     median  max        nmissing  eltype ⋯
+     │ Symbol             Union…   Any     Union…  Any        Int64     Type   ⋯
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │ species                     Adelie          Gentoo            0  String ⋯
+   2 │ island                      Biscoe          Torgersen         0  String
+   3 │ bill_length_mm     43.9219  32.1    44.45   59.6              2  Union{
+   4 │ bill_depth_mm      17.1512  13.1    17.3    21.5              2  Union{
+   5 │ flipper_length_mm  200.915  172     197.0   231               2  Union{ ⋯
+   6 │ body_mass_g        4201.75  2700    4050.0  6300              2  Union{
+   7 │ sex                         female          male             11  Union{
+                                                                1 column omitted</code></pre>
+</div>
+</div>
+<ul>
+<li>Enfin, on supprime les lignes avec des valeurs manquantes (ce n’est pas forcément la meilleur option, on en reparlera dans un article dédié)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb10-1"><span class="fu" style="color: #4758AB;">dropmissing!</span>(penguins) <span class="co" style="color: #5E5E5E;"># suppression des lignes avec des valeurs manquantes (équivalent de drop_na()). Ici, le ! (bang) permet de modifier le DataFrame en place</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>333×7 DataFrame
+ Row │ species    island     bill_length_mm  bill_depth_mm  flipper_length_mm  ⋯
+     │ String15   String15   Float64         Float64        Int64              ⋯
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │ Adelie     Torgersen            39.1           18.7                181  ⋯
+   2 │ Adelie     Torgersen            39.5           17.4                186
+   3 │ Adelie     Torgersen            40.3           18.0                195
+   4 │ Adelie     Torgersen            36.7           19.3                193
+   5 │ Adelie     Torgersen            39.3           20.6                190  ⋯
+   6 │ Adelie     Torgersen            38.9           17.8                181
+   7 │ Adelie     Torgersen            39.2           19.6                195
+   8 │ Adelie     Torgersen            41.1           17.6                182
+  ⋮  │     ⋮          ⋮            ⋮               ⋮                ⋮          ⋱
+ 327 │ Chinstrap  Dream                46.8           16.5                189  ⋯
+ 328 │ Chinstrap  Dream                45.7           17.0                195
+ 329 │ Chinstrap  Dream                55.8           19.8                207
+ 330 │ Chinstrap  Dream                43.5           18.1                202
+ 331 │ Chinstrap  Dream                49.6           18.2                193  ⋯
+ 332 │ Chinstrap  Dream                50.8           19.0                210
+ 333 │ Chinstrap  Dream                50.2           18.7                198
+                                                  2 columns and 318 rows omitted</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="comparaison-taille-moyennes-des-becs-entre-mâles-et-femelles" class="level1">
+<h1>Comparaison taille moyennes des becs entre mâles et femelles</h1>
+<p>Avant de se lancer dans des tests statistiques, il est toujours bon de représenter les données sous forme de graphique. Ici, nous allons réaliser des boxplots. Pour rappel, les boxplots nous donnent la <a href="https://fr.wikipedia.org/wiki/M%C3%A9diane_(statistiques)">médiane</a> (la ligne horizontale), les 1ers et 3ièmes <a href="https://fr.wikipedia.org/wiki/Quartile">quartiles</a> (le haut et le bas de la boîte) ainsi que le minimum et maximum (les moustaches).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nous n’utilisons les boxplots par défaut sans aucune option. La “custumization” des plots sera abordée dans un autre article.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" aria-controls="tabset-3-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" aria-controls="tabset-3-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" aria-labelledby="tabset-3-1-tab">
+<ul>
+<li>On utilise la fonction de ggplot pour définir le jeux de données et les axes et on ajoute la ‘geom’ (le type de graphique)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;">ggplot</span>(<span class="at" style="color: #657422;">data =</span> penguins, <span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> sex, <span class="at" style="color: #657422;">y =</span> bill_length_mm)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb12-2">  <span class="fu" style="color: #4758AB;">geom_boxplot</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://analyseR/posts/220821_compare_means/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><span class="co" style="color: #5E5E5E;"># Ici on profite de la [macro](https://docs.julialang.org/en/v1/manual/metaprogramming/) @df</span></span>
+<span id="cb13-2"><span class="co" style="color: #5E5E5E;"># qui nous permet d'appeler les colonnes avec :)</span></span>
+<span id="cb13-3"></span>
+<span id="cb13-4"><span class="pp" style="color: #AD0000;">@df</span> penguins <span class="fu" style="color: #4758AB;">boxplot</span>(<span class="op" style="color: #5E5E5E;">:</span>sex, <span class="op" style="color: #5E5E5E;">:</span>bill_length_mm)</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://analyseR/posts/220821_compare_means/index_files/figure-html/unnamed-chunk-11-J1.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>On voit ici que même si les données sont très hétérogènes (les quartiles, minimum et maximum sont grands), le chevauchement est modéré. Il est donc envisageable de trouver une différence de taille moyenne entre les deux sexes.</p>
+</section>
+<section id="test-de-normalité" class="level1">
+<h1>Test de normalité</h1>
+<p>Avant de se lancer dans le test de comparaison de moyennes, nous devons savoir si nos données sont normales. C’est l’une des hypothèses de base qui nous permet de choisir entre un test paramètrique (si les données sont normales) ou non paramètrique (si elles ne le sont pas).</p>
+<section id="graphiques" class="level2">
+<h2 class="anchored" data-anchor-id="graphiques">Graphiques</h2>
+<p>Encore une fois, un petit graphique va nous aider…</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" aria-controls="tabset-4-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;">ggplot</span>(<span class="at" style="color: #657422;">data =</span> penguins, <span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> bill_length_mm, <span class="at" style="color: #657422;">color =</span> sex)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb14-2">  <span class="fu" style="color: #4758AB;">geom_density</span>() <span class="co" style="color: #5E5E5E;"># rien de révolutionnaire, au lieu d'un boxplot on veut une version lissée d'un histogramme</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://analyseR/posts/220821_compare_means/index_files/figure-html/unnamed-chunk-12-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><span class="pp" style="color: #AD0000;">@df</span> penguins <span class="fu" style="color: #4758AB;">density</span>(<span class="op" style="color: #5E5E5E;">:</span>bill_length_mm, group <span class="op" style="color: #5E5E5E;">=</span> <span class="op" style="color: #5E5E5E;">:</span>sex) <span class="co" style="color: #5E5E5E;"># rien de révolutionnaire, au lieu d'un boxplot on veut une version lissée d'un histogramme</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://analyseR/posts/220821_compare_means/index_files/figure-html/unnamed-chunk-13-J1.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="test" class="level2">
+<h2 class="anchored" data-anchor-id="test">Test</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" aria-controls="tabset-5-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" aria-controls="tabset-5-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" aria-labelledby="tabset-5-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;">with</span>(penguins, <span class="fu" style="color: #4758AB;">tapply</span>(bill_length_mm, sex, ad.test))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$female
+
+    Anderson-Darling normality test
+
+data:  X[[i]]
+A = 3.3953, p-value = 1.58e-08
+
+
+$male
+
+    Anderson-Darling normality test
+
+data:  X[[i]]
+A = 4.5409, p-value = 2.631e-11</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" aria-labelledby="tabset-5-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb18-1">gp_penguins <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">groupby</span>(penguins, <span class="op" style="color: #5E5E5E;">:</span>sex, sort <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">true</span>)  </span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GroupedDataFrame with 2 groups based on key: sex
+First Group (165 rows): sex = "female"
+ Row │ species    island     bill_length_mm  bill_depth_mm  flipper_length_mm  ⋯
+     │ String15   String15   Float64         Float64        Int64              ⋯
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │ Adelie     Torgersen            39.5           17.4                186  ⋯
+   2 │ Adelie     Torgersen            40.3           18.0                195
+   3 │ Adelie     Torgersen            36.7           19.3                193
+   4 │ Adelie     Torgersen            38.9           17.8                181
+   5 │ Adelie     Torgersen            41.1           17.6                182  ⋯
+   6 │ Adelie     Torgersen            36.6           17.8                185
+   7 │ Adelie     Torgersen            38.7           19.0                195
+   8 │ Adelie     Torgersen            34.4           18.4                184
+  ⋮  │     ⋮          ⋮            ⋮               ⋮                ⋮          ⋱
+ 158 │ Chinstrap  Dream                45.7           17.3                193  ⋯
+ 159 │ Chinstrap  Dream                42.5           17.3                187
+ 160 │ Chinstrap  Dream                45.2           16.6                191
+ 161 │ Chinstrap  Dream                45.6           19.4                194
+ 162 │ Chinstrap  Dream                46.8           16.5                189  ⋯
+ 163 │ Chinstrap  Dream                45.7           17.0                195
+ 164 │ Chinstrap  Dream                43.5           18.1                202
+ 165 │ Chinstrap  Dream                50.2           18.7                198
+                                                  2 columns and 149 rows omitted
+⋮
+Last Group (168 rows): sex = "male"
+ Row │ species    island     bill_length_mm  bill_depth_mm  flipper_length_mm  ⋯
+     │ String15   String15   Float64         Float64        Int64              ⋯
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │ Adelie     Torgersen            39.1           18.7                181  ⋯
+   2 │ Adelie     Torgersen            39.3           20.6                190
+   3 │ Adelie     Torgersen            39.2           19.6                195
+   4 │ Adelie     Torgersen            38.6           21.2                191
+   5 │ Adelie     Torgersen            34.6           21.1                198  ⋯
+   6 │ Adelie     Torgersen            42.5           20.7                197
+   7 │ Adelie     Torgersen            46.0           21.5                194
+   8 │ Adelie     Biscoe               37.7           18.7                180
+  ⋮  │     ⋮          ⋮            ⋮               ⋮                ⋮          ⋱
+ 161 │ Chinstrap  Dream                50.7           19.7                203  ⋯
+ 162 │ Chinstrap  Dream                52.2           18.8                197
+ 163 │ Chinstrap  Dream                49.3           19.9                203
+ 164 │ Chinstrap  Dream                50.2           18.8                202
+ 165 │ Chinstrap  Dream                51.9           19.5                206  ⋯
+ 166 │ Chinstrap  Dream                55.8           19.8                207
+ 167 │ Chinstrap  Dream                49.6           18.2                193
+ 168 │ Chinstrap  Dream                50.8           19.0                210
+                                                  2 columns and 152 rows omitted</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb20-1"></span>
+<span id="cb20-2">res <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">combine</span>(gp_penguins, <span class="op" style="color: #5E5E5E;">:</span>bill_length_mm <span class="op" style="color: #5E5E5E;">=&gt;</span> (bill_length_mm <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="fu" style="color: #4758AB;">OneSampleADTest</span>(bill_length_mm, <span class="fu" style="color: #4758AB;">Normal</span>())) <span class="op" style="color: #5E5E5E;">=&gt;</span> <span class="op" style="color: #5E5E5E;">:</span>ADTest)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2×2 DataFrame
+ Row │ sex      ADTest
+     │ String7  OneSampl…
+─────┼────────────────────────────────────────────
+   1 │ female   One sample Anderson-Darling test…
+   2 │ male     One sample Anderson-Darling test…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb22-1"></span>
+<span id="cb22-2"><span class="fu" style="color: #4758AB;">println</span>(res[<span class="fl" style="color: #AD0000;">1</span>,<span class="op" style="color: #5E5E5E;">:</span>])</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DataFrameRow
+ Row │ sex      ADTest
+     │ String7  OneSampl…
+─────┼────────────────────────────────────────────
+   1 │ female   One sample Anderson-Darling test…</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="test-dhomostédasticité" class="level1">
+<h1>Test d’homostédasticité</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" aria-controls="tabset-6-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" aria-controls="tabset-6-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" aria-labelledby="tabset-6-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="fu" style="color: #4758AB;">bartlett.test</span>(bill_length_mm <span class="sc" style="color: #5E5E5E;">~</span> sex, <span class="at" style="color: #657422;">data =</span> penguins)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Bartlett test of homogeneity of variances
+
+data:  bill_length_mm by sex
+Bartlett's K-squared = 1.3429, df = 1, p-value = 0.2465</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane" aria-labelledby="tabset-6-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb26-1"><span class="co" style="color: #5E5E5E;"># Pour une raison incconnue une syntaxe indentique à celle utilisée plus bas ne fonctionne pas</span></span>
+<span id="cb26-2"><span class="fu" style="color: #4758AB;">BartlettTest</span>(penguins[penguins.sex <span class="op" style="color: #5E5E5E;">.==</span> <span class="st" style="color: #20794D;">"male"</span>,<span class="op" style="color: #5E5E5E;">:</span>bill_length_mm], </span>
+<span id="cb26-3">             penguins[penguins.sex <span class="op" style="color: #5E5E5E;">.==</span> <span class="st" style="color: #20794D;">"female"</span>,<span class="op" style="color: #5E5E5E;">:</span>bill_length_mm])</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-de-comparaison-de-moyennes" class="level1">
+<h1>Test de comparaison de moyennes</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" aria-controls="tabset-7-1" aria-selected="true">R</a></li><li class="nav-item"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" aria-controls="tabset-7-2" aria-selected="false">Julia</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" aria-labelledby="tabset-7-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="fu" style="color: #4758AB;">t.test</span>(bill_length_mm <span class="sc" style="color: #5E5E5E;">~</span> sex,  <span class="at" style="color: #657422;">data =</span> penguins)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  bill_length_mm by sex
+t = -6.6725, df = 329.29, p-value = 1.066e-10
+alternative hypothesis: true difference in means between group female and group male is not equal to 0
+95 percent confidence interval:
+ -4.865676 -2.649908
+sample estimates:
+mean in group female   mean in group male 
+            42.09697             45.85476 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" aria-labelledby="tabset-7-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><span class="fu" style="color: #4758AB;">EqualVarianceTTest</span>(penguins[penguins.sex <span class="op" style="color: #5E5E5E;">.==</span> <span class="st" style="color: #20794D;">"male"</span>,<span class="op" style="color: #5E5E5E;">:</span>bill_length_mm], </span>
+<span id="cb29-2">                   penguins[penguins.sex <span class="op" style="color: #5E5E5E;">.==</span> <span class="st" style="color: #20794D;">"female"</span>,<span class="op" style="color: #5E5E5E;">:</span>bill_length_mm])</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Two sample t-test (equal variance)
+----------------------------------
+Population details:
+    parameter of interest:   Mean difference
+    value under h_0:         0
+    point estimate:          3.75779
+    95% confidence interval: (2.649, 4.867)
+
+Test summary:
+    outcome with 95% confidence: reject h_0
+    two-sided p-value:           &lt;1e-09
+
+Details:
+    number of observations:   [168,165]
+    t-statistic:              6.667027633163074
+    degrees of freedom:       331
+    empirical standard error: 0.5636383129867701</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-gorman_2014" class="csl-entry">
+Gorman, Tony D. AND Fraser, Kristen B. AND Williams. 2014. <span>“Ecological Sexual Dimorphism and Environmental Variability Within a Community of Antarctic Penguins (Genus Pygoscelis).”</span> <em>PLOS ONE</em> 9 (3): 1–14. <a href="https://doi.org/10.1371/journal.pone.0090081">https://doi.org/10.1371/journal.pone.0090081</a>.
+</div>
+<div id="ref-Rpkg_nortest" class="csl-entry">
+Gross, Juergen, and Uwe Ligges. 2015. <em>Nortest: Tests for Normality</em>. <a href="https://CRAN.R-project.org/package=nortest">https://CRAN.R-project.org/package=nortest</a>.
+</div>
+<div id="ref-Rpkg_palmer" class="csl-entry">
+Horst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. <em>Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</em>. <a href="https://doi.org/10.5281/zenodo.3960218">https://doi.org/10.5281/zenodo.3960218</a>.
+</div>
+<div id="ref-Rpkg_ggplot2" class="csl-entry">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-Rpkg_dplyr" class="csl-entry">
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2022. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+<div id="ref-Rpkg_tidyr" class="csl-entry">
+Wickham, Hadley, and Maximilian Girlich. 2022. <em>Tidyr: Tidy Messy Data</em>. <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>R</category>
+  <category>Julia</category>
+  <category>moyennes</category>
+  <category>statistiques</category>
+  <guid>https://analyseR/posts/220821_compare_means/index.html</guid>
+  <pubDate>Wed, 24 Aug 2022 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
