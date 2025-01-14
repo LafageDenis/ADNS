@@ -27,7 +27,6 @@ comments: false
 
 @ADNS vous propose d'analyser vos données naturalistes (qu'elles soient spatiales ou non) et de développer des outils de reporting automatique de ces dernières.\
 Vous disposez de jeux de données d'inventaires, de suivis ou d'expertises. Vous souhaitez 'nettoyer' ces données, les analyser, automatiser la rédaction de rapports d'analyse. Vous êtes au bon endroit.\
-Consultez la page détaillant les [prestations](prestations)\
 
 ## Bio
 

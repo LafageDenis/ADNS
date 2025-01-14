@@ -10,7 +10,7 @@ website:
   open-graph:
     locale: Fr
   twitter-card:
-    creator: "@ResearchDenis"
+    creator: "Lafage Denis"
   comments:
     utterances:
       repo: LafageDenis/ADNS
