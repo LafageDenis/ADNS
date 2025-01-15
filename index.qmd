@@ -8,12 +8,15 @@ about:
     - text: LinkedIn
       icon: linkedin
       url: "https://www.linkedin.com/in/denis-lafage-79b18145/"
+      target: "_blank"
     - text: GitHub
       icon: github
       url: "https://github.com/LafageDenis"
+      target: "_blank"
     - text: Gitlab
       icon : gitlab
       url: "https://gitlab.com/DenisLafage"
+      target: "_blank"
     - text: Email
       icon: email 
       url: "mailto:lafage.denis@gmail.com"
