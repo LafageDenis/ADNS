@@ -1,1 +1,1 @@
-Sitemap: https://LafageDenis.github.io/ADNS/sitemap.xml
+Sitemap: https://lafagedenis.github.io/ADNS/sitemap.xml
