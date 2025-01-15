@@ -17,8 +17,8 @@ about:
     - text: Email
       icon: email 
       url: "mailto:lafage.denis@gmail.com"
-    - text: CV
-      url: "https://lafagedenis.github.io/ADNS/cv.pdf"
+    # - text: CV
+    #   url: "https://lafagedenis.github.io/ADNS/cv.pdf"
 comments: false
 ---
 
