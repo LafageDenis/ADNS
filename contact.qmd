@@ -41,4 +41,10 @@ tenir
 Une annexe fixera les droits qui s'appliqueront au code créé et aux données.
 
 
+# Coordonnées
 
+{{< fa regular envelope >}}  lafage.denis at gmail.com  
+{{< fa phone >}}  +33(0)7 67 01 24 10  
+{{< fa regular building >}} 2 Square de Verdun,  
+44230 Saint-Sébastien-sur-Loire  
+France
