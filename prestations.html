@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:locale" content="Fr">
 <meta name="twitter:title" content="Prestations">
 <meta name="twitter:description" content="Ananlyses de Données Naturalistes Spatialisées">
-<meta name="twitter:creator" content="Lafage Denis">
+<meta name="twitter:creator" content="@ResearchDenis">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -113,6 +113,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./contact.html"> <i class="bi bi-mail" role="img">
 </i> 
 <span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -172,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./img/r_julia.png" class="quarto-figure quarto-figure-center figure-img" height="150"></p>
 </figure>
 </div>
-</div></div><p>Utilisant depuis près de 15 ans le langage <i class="fa-brands fa-r-project" aria-label="r-project"></i>, ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par <strong>Julia</strong>.<br>
+</div></div><p>Utilisant depuis près de 15 ans le langage <i class="fa-brands fa-r-project" aria-label="r-project"></i>, ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par Julia.<br>
 </p>
 </section>
 <section id="analyse-de-données" class="level1 page-columns page-full">
@@ -184,12 +189,12 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./img/analyses_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</div></div><p>Dans la cadre des prestations d’analyse de données, plusieurs scripts R vous seront fournis pour les différentes étapes de l’analyse :</p>
+</div></div><p>Dans la cadre de prestations d’analyse de données, plusieurs scripts R vous seront fournis pour les différentes étapes de l’analyse :</p>
 <ul>
-<li><p><strong>import</strong> des données</p></li>
-<li><p><strong>nettoyage</strong> et <strong>mise en forme</strong> des données</p></li>
-<li><p><strong>analyses statistiques</strong> (fréquentistes ou Bayesiennes, multivariées…)</p></li>
-<li><p>production de <strong>figures</strong> (graphiques et cartes statiques ou interactives)</p></li>
+<li><p>import des données</p></li>
+<li><p>nettoyage et mise en forme des données</p></li>
+<li><p>analyses statistiques (fréquentistes ou Bayesiennes, multivariées…)</p></li>
+<li><p>production de figures (graphiques et cartes statiques ou interactives)</p></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -204,13 +209,13 @@ Selon le vieil adage :
 <p>A partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.</p>
 </div>
 </div>
-<p>Ainsi dès que cela sera nécessaire une <strong>fonction</strong> accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.<br>
-La <strong>création de packages</strong> dédiés est réalisée en option.</p>
+<p>Ainsi dès que cela sera nécessaire une fonction accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.<br>
+La création de packages dédiés est réalisée en option.</p>
 </section>
 <section id="automatisation-de-rapports-et-dashboards" class="level1">
 <h1>Automatisation de rapports et dashboards</h1>
 <p>Vous produisez des rapports de synthèse mensuels? Vous réalisez des rapports d’activité? Ces documents suivent souvent le même squelette.<br>
-Grâce à <i class="fa-brands fa-r-project" aria-label="r-project"></i> + Quarto nous pouvons automatiser la production de ces documents (éventuellement sous forme de package) afin que vous n’ayez plus qu’à vous concentrer sur l’interprétation des résultats.<br>
+Grâce à R + Quarto nous pouvons automatiser la production de ces documents (éventuellement sous forme de package) afin que vous n’ayez plus qu’à vous concentrer sur l’interprétation des résultats.<br>
 Grâce à Quarto ces documents peuvent prendre la forme de :</p>
 <ul>
 <li><p>rapports (<i class="fa-solid fa-file-word" aria-label="file-word"></i>, <i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> …),</p></li>
@@ -227,8 +232,8 @@ Grâce à Quarto ces documents peuvent prendre la forme de :</p>
 <p><img src="./img/pgsql_duckdb.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</div></div><p>Gérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données <strong>PostgresSQL/PostGIS</strong> ou <strong>DuckDB</strong> (pour plus de vitesse et afin de se débarasser du côté serveur).<br>
-Les requêtes peuvent être effectuer en SQL ou en <i class="fa-brands fa-r-project" aria-label="r-project"></i> selon vos préférences.</p>
+</div></div><p>Gérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données PostgresSQL/PostGIS ou DuckDB (pour plus de vitesse et se débarasser de l’aspect serveur).<br>
+Les requêtes peuvent être effectuer en SQL ou en R selon vos préférences.</p>
 </section>
 <section id="création-de-package" class="level1 page-columns page-full">
 <h1>Création de package</h1>
@@ -239,10 +244,10 @@ Les requêtes peuvent être effectuer en SQL ou en <i class="fa-brands fa-r-proj
 <p><img src="./img/hex_adns_h.png" class="quarto-figure quarto-figure-center figure-img" height="150"></p>
 </figure>
 </div>
-</div></div><p>Lorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intègrer dans un <strong>package</strong>.<br>
+</div></div><p>Lorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intègrer dans un package.<br>
 Je vous propose donc de créer un package qui rassemblera non seulement toutes les fonctions qui vous sont nécessaires mais aussi une documentation et des tests unitaires.<br>
 Si vous ne disposez pas des connaissances nécessaires au maintien du package une prestation spécifique vous est par ailleur proposée.</p>
-<p><strong>Pour obtenir un devis sur mesure rendez-vous sur la page de <a href="./contact.html">contact</a>.</strong></p>
+<p>Pour obtenir un devis sur mesure rendez-vous sur la page de <a href="./contact.html">contact</a>.</p>
 
 
 </section>
@@ -340,7 +345,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/lafagedenis\.github\.io\/ADNS\/");
+      var filterRegex = new RegExp("https:\/\/LafageDenis\.github\.io\/ADNS\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

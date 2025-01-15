@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lafagedenis.github.io/ADNS/contact.html</loc>
-    <lastmod>2025-01-15T12:21:19.466Z</lastmod>
+    <loc>https://LafageDenis.github.io/ADNS/prestations.html</loc>
+    <lastmod>2025-01-11T20:52:21.658Z</lastmod>
   </url>
   <url>
-    <loc>https://lafagedenis.github.io/ADNS/index.html</loc>
-    <lastmod>2025-01-15T12:38:23.062Z</lastmod>
+    <loc>https://LafageDenis.github.io/ADNS/contact.html</loc>
+    <lastmod>2025-01-11T20:52:21.512Z</lastmod>
   </url>
   <url>
-    <loc>https://lafagedenis.github.io/ADNS/prestations.html</loc>
-    <lastmod>2025-01-15T12:21:19.612Z</lastmod>
+    <loc>https://LafageDenis.github.io/ADNS/papers/old_index.html</loc>
+    <lastmod>2025-01-11T20:52:21.653Z</lastmod>
   </url>
   <url>
-    <loc>https://lafagedenis.github.io/ADNS/papers/index.html</loc>
-    <lastmod>2025-01-15T12:21:19.611Z</lastmod>
+    <loc>https://LafageDenis.github.io/ADNS/quotes/index.html</loc>
+    <lastmod>2025-01-11T20:52:21.658Z</lastmod>
   </url>
   <url>
-    <loc>https://lafagedenis.github.io/ADNS/quotes/index.html</loc>
-    <lastmod>2025-01-15T12:21:19.612Z</lastmod>
+    <loc>https://LafageDenis.github.io/ADNS/papers/index.html</loc>
+    <lastmod>2025-01-11T20:52:21.653Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LafageDenis.github.io/ADNS/index.html</loc>
+    <lastmod>2025-01-12T10:01:12.120Z</lastmod>
   </url>
 </urlset>
