@@ -33,7 +33,7 @@ Vous disposez de jeux de données d'inventaires, de suivis ou d'expertises. Vous
 
 ## Bio
 
-Ecologue de formation, je possède un double parcours professionnel de responsable scientifique au sein d'organismes œuvrant pour la protection de la nature et de chercheur en écologie. Ce parcours m'a amené à me spécialiser dans l'analyse et la gestion de données à composantes spatiale.
+Écologue de formation, je possède un double parcours professionnel de responsable scientifique au sein d'organismes œuvrant pour la protection de la nature et de chercheur en écologie. Ce parcours m'a amené à me spécialiser dans l'analyse et la gestion de données à composantes spatiales.
 
 Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qmd) proposées mais aussi une liste de [mes publications](papers) et [mon CV](cv.pdf).
 
@@ -43,7 +43,7 @@ Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qm
 
 ## Formation
 
-Doctorat en écologie \| 2011-2014\
+Doctorat en écologie \| 2014\
 Master en écologie \| 2008
 
 <p>
