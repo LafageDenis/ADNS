@@ -14,6 +14,13 @@
     "text": "Analyse de données\n\n\n\n\n\n\n\nDans la cadre des prestations d’analyse de données, plusieurs scripts R seront fournis pour les différentes étapes de l’analyse :\n\nimport des données\nnettoyage et mise en forme des données\nanalyses statistiques (fréquentistes ou Bayesiennes, multivariées…)\nproduction de figures (graphiques et cartes statiques ou interactives)\n\n\n\n\n\n\n\nSelon le vieil adage :\n\n\n\nÀ partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.\n\n\nAinsi dès que cela sera nécessaire, une fonction accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.\nLa création de packages dédiés est réalisée en option."
   },
   {
+    "objectID": "prestations.html#automatisation-de-rapports-et-dashboards",
+    "href": "prestations.html#automatisation-de-rapports-et-dashboards",
+    "title": "Prestations",
+    "section": "Automatisation de rapports et dashboards",
+    "text": "Automatisation de rapports et dashboards\nLa réalisation de rapports de synthèse mensuels ou de rapports d’activité est une tâche très répétitive qu’il est très pertinent d’automatiser.\nGrâce à  + Quarto il est possible d’automatiser la production de ces documents (éventuellement sous forme de package).\nGrâce à Quarto ces documents peuvent prendre la forme de :\n\nrapports (,  …),\nprésentations (),\ndashboards."
+  },
+  {
     "objectID": "prestations.html#bases-de-données",
     "href": "prestations.html#bases-de-données",
     "title": "Prestations",
