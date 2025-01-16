@@ -49,7 +49,7 @@ de faciliter la réutilisation des scripts par le client.
 Ceci constitue la prestation minimale proposée.  
 La **création de packages** dédiés est réalisée en option. 
 
-# Automatisation de rapports et dashboards
+## Automatisation de rapports et dashboards
 
 La réalisation de rapports de synthèse mensuels ou de rapports d'activité est 
 une tâche très répétitive qu'il est très pertinent d'automatiser.  

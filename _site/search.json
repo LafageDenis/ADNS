@@ -25,7 +25,7 @@
     "href": "prestations.html#création-de-package",
     "title": "Prestations",
     "section": "Création de package",
-    "text": "Création de package\n\n\n\n\n\n\n\nLorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intégrer dans un package.\nDans ce cas, package qui rassemblera non seulement toutes les fonctions nécessaires mais aussi une documentation et des tests unitaires sera créé.\nSi besoin, une prestation spécifique de maintien du package est aussi proposée.\nPour obtenir un devis sur mesure rendez-vous sur la page de contact."
+    "text": "Création de package\n\n\n\n\n\n\n\nLorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intégrer dans un package.\nDans ce cas, package qui rassemblera non seulement toutes les fonctions nécessaires mais aussi une documentation et des tests unitaires sera créé.\nSi besoin, une prestation spécifique de maintien du package est aussi proposée.\nAfin d’obtenir un devis sur mesure rendez-vous sur la page de contact."
   },
   {
     "objectID": "contact.html",
@@ -89,5 +89,12 @@
     "title": "",
     "section": "",
     "text": "Doctorat en écologie | 2014\nMaster en écologie | 2008"
+  },
+  {
+    "objectID": "prestations.html#automatisation-de-rapports-et-dashboards",
+    "href": "prestations.html#automatisation-de-rapports-et-dashboards",
+    "title": "Prestations",
+    "section": "Automatisation de rapports et dashboards",
+    "text": "Automatisation de rapports et dashboards\nLa réalisation de rapports de synthèse mensuels ou de rapports d’activité est une tâche très répétitive qu’il est très pertinent d’automatiser.\nGrâce à  + Quarto il est possible d’automatiser la production de ces documents (éventuellement sous forme de package).\nGrâce à Quarto ces documents peuvent prendre la forme de :\n\nrapports (,  …),\nprésentations (),\ndashboards."
   }
 ]
