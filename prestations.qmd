@@ -9,7 +9,7 @@ format:
 
 ![](./img/presta.png){fig-align="center" height=200}  
 
-# Approche générale
+## Approche générale
 ::: {.column-margin}
 ![](./img/r_julia.png){fig-align="center" height=150} 
 :::
@@ -18,14 +18,14 @@ dernier constitue la pierre angulaire de mon travail. Dans quelques cas
 particuliers (lorsque les performances deviennent un facteur limitant) il pourra
 cependant être remplacer par **Julia**. \
 
-# Analyse de données
+## Analyse de données
   
 ::: {.column-margin}
 ![](./img/analyses_2.png){fig-align="center"} 
 :::
 
-Dans la cadre des prestations d'analyse de données, plusieurs scripts R vous 
-seront fournis pour les différentes étapes de l'analyse :
+Dans la cadre des prestations d'analyse de données, plusieurs scripts R seront 
+fournis pour les différentes étapes de l'analyse :
 
 -   **import** des données
 
@@ -39,11 +39,11 @@ seront fournis pour les différentes étapes de l'analyse :
 
 :::{.callout-tip}
 # Selon le vieil adage : 
-A partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, 
+À partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, 
 il faut faire un package. 
 :::
 
-Ainsi dès que cela sera nécessaire une **fonction** accompagnée de sa 
+Ainsi dès que cela sera nécessaire, une **fonction** accompagnée de sa 
 documentation et de ses tests unitaires sera créée afin de simplifier le code et
 de faciliter la réutilisation des scripts par le client. 
 Ceci constitue la prestation minimale proposée.  
@@ -51,11 +51,11 @@ La **création de packages** dédiés est réalisée en option.
 
 # Automatisation de rapports et dashboards
 
-Vous produisez des rapports de synthèse mensuels? Vous réalisez des rapports
-d'activité? Ces documents suivent souvent le même squelette.  
-Grâce à {{< fa brands r-project >}} + Quarto nous pouvons automatiser la 
-production de ces documents (éventuellement sous forme de package) afin que 
-vous n'ayez plus qu'à vous concentrer sur l'interprétation des résultats.  
+La réalisation de rapports de synthèse mensuels ou de rapports d'activité est 
+une tâche très répétitive qu'il est très pertinent d'automatiser.  
+Grâce à {{< fa brands r-project >}} + Quarto il est possible d'automatiser la 
+production de ces documents (éventuellement sous forme de package).  
+
 Grâce à Quarto ces documents peuvent prendre la forme de :
 
 -   rapports ({{< fa file-word >}}, {{< fa file-pdf >}} ...), 
@@ -64,7 +64,7 @@ Grâce à Quarto ces documents peuvent prendre la forme de :
 
 -   dashboards.   
 
-# Bases de données
+## Bases de données
 
 ::: {.column-margin}
 ![](./img/pgsql_duckdb.png){fig-align="center"} 
@@ -78,18 +78,17 @@ Les requêtes peuvent être effectuer en SQL ou en {{< fa brands r-project >}}
 selon vos préférences.  
 
 
-# Création de package
+## Création de package
 :::{.column-margin}
 ![](./img/hex_adns_h.png){fig-align="center" height=150} 
 :::
 
 Lorsque la complexité des analyses/rapports/présentations/dashboards s'accroît, 
-il est très vite indispensable de les intègrer dans un **package**.  
-Je vous propose donc de créer un package qui rassemblera non seulement toutes les
-fonctions qui vous sont nécessaires mais aussi une documentation et des tests 
-unitaires.  
-Si vous ne disposez pas des connaissances nécessaires au maintien du package une
-prestation spécifique vous est par ailleur proposée.  
+il est très vite indispensable de les intégrer dans un **package**.  
+Dans ce cas, package qui rassemblera non seulement toutes les fonctions 
+nécessaires mais aussi une documentation et des tests unitaires sera créé.  
 
-**Pour obtenir un devis sur mesure rendez-vous sur la page de [contact](contact.qmd).**
+Si besoin, une prestation spécifique de maintien du package est aussi proposée.  
+
+**Afin d'obtenir un devis sur mesure rendez-vous sur la page de [contact](contact.qmd).**
 
