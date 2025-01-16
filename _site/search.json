@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "prestations.html",
-    "href": "prestations.html",
+    "objectID": "prestations.html#approche-générale",
+    "href": "prestations.html#approche-générale",
     "title": "Prestations",
-    "section": "",
-    "text": "Approche générale\n\n\n\n\n\n\n\nUtilisant depuis près de 15 ans le langage , ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par Julia.\n\n\n\nAnalyse de données\n\n\n\n\n\n\n\nDans la cadre des prestations d’analyse de données, plusieurs scripts R vous seront fournis pour les différentes étapes de l’analyse :\n\nimport des données\nnettoyage et mise en forme des données\nanalyses statistiques (fréquentistes ou Bayesiennes, multivariées…)\nproduction de figures (graphiques et cartes statiques ou interactives)\n\n\n\n\n\n\n\nSelon le vieil adage :\n\n\n\nA partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.\n\n\nAinsi dès que cela sera nécessaire une fonction accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.\nLa création de packages dédiés est réalisée en option.\n\n\nAutomatisation de rapports et dashboards\nVous produisez des rapports de synthèse mensuels? Vous réalisez des rapports d’activité? Ces documents suivent souvent le même squelette.\nGrâce à  + Quarto nous pouvons automatiser la production de ces documents (éventuellement sous forme de package) afin que vous n’ayez plus qu’à vous concentrer sur l’interprétation des résultats.\nGrâce à Quarto ces documents peuvent prendre la forme de :\n\nrapports (,  …),\nprésentations (),\ndashboards.\n\n\n\nBases de données\n\n\n\n\n\n\n\nGérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données PostgresSQL/PostGIS ou DuckDB (pour plus de vitesse et afin de se débarasser du côté serveur).\nLes requêtes peuvent être effectuer en SQL ou en  selon vos préférences.\n\n\nCréation de package\n\n\n\n\n\n\n\nLorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intègrer dans un package.\nJe vous propose donc de créer un package qui rassemblera non seulement toutes les fonctions qui vous sont nécessaires mais aussi une documentation et des tests unitaires.\nSi vous ne disposez pas des connaissances nécessaires au maintien du package une prestation spécifique vous est par ailleur proposée.\nPour obtenir un devis sur mesure rendez-vous sur la page de contact."
+    "section": "Approche générale",
+    "text": "Approche générale\n\n\n\n\n\n\n\nUtilisant depuis près de 15 ans le langage , ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par Julia."
+  },
+  {
+    "objectID": "prestations.html#analyse-de-données",
+    "href": "prestations.html#analyse-de-données",
+    "title": "Prestations",
+    "section": "Analyse de données",
+    "text": "Analyse de données\n\n\n\n\n\n\n\nDans la cadre des prestations d’analyse de données, plusieurs scripts R seront fournis pour les différentes étapes de l’analyse :\n\nimport des données\nnettoyage et mise en forme des données\nanalyses statistiques (fréquentistes ou Bayesiennes, multivariées…)\nproduction de figures (graphiques et cartes statiques ou interactives)\n\n\n\n\n\n\n\nSelon le vieil adage :\n\n\n\nÀ partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.\n\n\nAinsi dès que cela sera nécessaire, une fonction accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.\nLa création de packages dédiés est réalisée en option."
+  },
+  {
+    "objectID": "prestations.html#bases-de-données",
+    "href": "prestations.html#bases-de-données",
+    "title": "Prestations",
+    "section": "Bases de données",
+    "text": "Bases de données\n\n\n\n\n\n\n\nGérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données PostgresSQL/PostGIS ou DuckDB (pour plus de vitesse et afin de se débarasser du côté serveur).\nLes requêtes peuvent être effectuer en SQL ou en  selon vos préférences."
+  },
+  {
+    "objectID": "prestations.html#création-de-package",
+    "href": "prestations.html#création-de-package",
+    "title": "Prestations",
+    "section": "Création de package",
+    "text": "Création de package\n\n\n\n\n\n\n\nLorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intégrer dans un package.\nDans ce cas, package qui rassemblera non seulement toutes les fonctions nécessaires mais aussi une documentation et des tests unitaires sera créé.\nSi besoin, une prestation spécifique de maintien du package est aussi proposée.\nPour obtenir un devis sur mesure rendez-vous sur la page de contact."
   },
   {
     "objectID": "contact.html",
@@ -68,33 +89,5 @@
     "title": "",
     "section": "",
     "text": "Doctorat en écologie | 2014\nMaster en écologie | 2008"
-  },
-  {
-    "objectID": "prestations.html#approche-générale",
-    "href": "prestations.html#approche-générale",
-    "title": "Prestations",
-    "section": "Approche générale",
-    "text": "Approche générale\n\n\n\n\n\n\n\nUtilisant depuis près de 15 ans le langage , ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par Julia."
-  },
-  {
-    "objectID": "prestations.html#analyse-de-données",
-    "href": "prestations.html#analyse-de-données",
-    "title": "Prestations",
-    "section": "Analyse de données",
-    "text": "Analyse de données\n\n\n\n\n\n\n\nDans la cadre des prestations d’analyse de données, plusieurs scripts R seront fournis pour les différentes étapes de l’analyse :\n\nimport des données\nnettoyage et mise en forme des données\nanalyses statistiques (fréquentistes ou Bayesiennes, multivariées…)\nproduction de figures (graphiques et cartes statiques ou interactives)\n\n\n\n\n\n\n\nSelon le vieil adage :\n\n\n\nÀ partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.\n\n\nAinsi dès que cela sera nécessaire, une fonction accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.\nLa création de packages dédiés est réalisée en option."
-  },
-  {
-    "objectID": "prestations.html#bases-de-données",
-    "href": "prestations.html#bases-de-données",
-    "title": "Prestations",
-    "section": "Bases de données",
-    "text": "Bases de données\n\n\n\n\n\n\n\nGérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données PostgresSQL/PostGIS ou DuckDB (pour plus de vitesse et afin de se débarasser du côté serveur).\nLes requêtes peuvent être effectuer en SQL ou en  selon vos préférences."
-  },
-  {
-    "objectID": "prestations.html#création-de-package",
-    "href": "prestations.html#création-de-package",
-    "title": "Prestations",
-    "section": "Création de package",
-    "text": "Création de package\n\n\n\n\n\n\n\nLorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intégrer dans un package.\nDans ce cas, package qui rassemblera non seulement toutes les fonctions nécessaires mais aussi une documentation et des tests unitaires sera créé.\nSi besoin, une prestation spécifique de maintien du package est aussi proposée.\nAfin d’obtenir un devis sur mesure rendez-vous sur la page de contact."
   }
 ]
