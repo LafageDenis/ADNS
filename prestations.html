@@ -131,9 +131,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#approche-générale" id="toc-approche-générale" class="nav-link active" data-scroll-target="#approche-générale">Approche générale</a></li>
   <li><a href="#analyse-de-données" id="toc-analyse-de-données" class="nav-link" data-scroll-target="#analyse-de-données">Analyse de données</a></li>
-  <li><a href="#automatisation-de-rapports-et-dashboards" id="toc-automatisation-de-rapports-et-dashboards" class="nav-link" data-scroll-target="#automatisation-de-rapports-et-dashboards">Automatisation de rapports et dashboards</a></li>
+  <li><a href="#automatisation-de-rapports-et-dashboards" id="toc-automatisation-de-rapports-et-dashboards" class="nav-link" data-scroll-target="#automatisation-de-rapports-et-dashboards">Automatisation de rapports et dashboards</a>
+  <ul class="collapse">
   <li><a href="#bases-de-données" id="toc-bases-de-données" class="nav-link" data-scroll-target="#bases-de-données">Bases de données</a></li>
   <li><a href="#création-de-package" id="toc-création-de-package" class="nav-link" data-scroll-target="#création-de-package">Création de package</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -168,8 +170,8 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./img/presta.png" class="quarto-figure quarto-figure-center figure-img" height="200"></p>
 </figure>
 </div>
-<section id="approche-générale" class="level1 page-columns page-full">
-<h1>Approche générale</h1>
+<section id="approche-générale" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="approche-générale">Approche générale</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
@@ -180,8 +182,8 @@ ul.task-list li input[type="checkbox"] {
 </div></div><p>Utilisant depuis près de 15 ans le langage <i class="fa-brands fa-r-project" aria-label="r-project"></i>, ce dernier constitue la pierre angulaire de mon travail. Dans quelques cas particuliers (lorsque les performances deviennent un facteur limitant) il pourra cependant être remplacer par <strong>Julia</strong>.<br>
 </p>
 </section>
-<section id="analyse-de-données" class="level1 page-columns page-full">
-<h1>Analyse de données</h1>
+<section id="analyse-de-données" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="analyse-de-données">Analyse de données</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
@@ -189,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./img/analyses_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</div></div><p>Dans la cadre des prestations d’analyse de données, plusieurs scripts R vous seront fournis pour les différentes étapes de l’analyse :</p>
+</div></div><p>Dans la cadre des prestations d’analyse de données, plusieurs scripts R seront fournis pour les différentes étapes de l’analyse :</p>
 <ul>
 <li><p><strong>import</strong> des données</p></li>
 <li><p><strong>nettoyage</strong> et <strong>mise en forme</strong> des données</p></li>
@@ -206,25 +208,24 @@ Selon le vieil adage :
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.</p>
+<p>À partir d’un copier-coller, une fonction s’impose et à partir d’une fonction, il faut faire un package.</p>
 </div>
 </div>
-<p>Ainsi dès que cela sera nécessaire une <strong>fonction</strong> accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.<br>
+<p>Ainsi dès que cela sera nécessaire, une <strong>fonction</strong> accompagnée de sa documentation et de ses tests unitaires sera créée afin de simplifier le code et de faciliter la réutilisation des scripts par le client. Ceci constitue la prestation minimale proposée.<br>
 La <strong>création de packages</strong> dédiés est réalisée en option.</p>
 </section>
-<section id="automatisation-de-rapports-et-dashboards" class="level1">
+<section id="automatisation-de-rapports-et-dashboards" class="level1 page-columns page-full">
 <h1>Automatisation de rapports et dashboards</h1>
-<p>Vous produisez des rapports de synthèse mensuels? Vous réalisez des rapports d’activité? Ces documents suivent souvent le même squelette.<br>
-Grâce à <i class="fa-brands fa-r-project" aria-label="r-project"></i> + Quarto nous pouvons automatiser la production de ces documents (éventuellement sous forme de package) afin que vous n’ayez plus qu’à vous concentrer sur l’interprétation des résultats.<br>
-Grâce à Quarto ces documents peuvent prendre la forme de :</p>
+<p>La réalisation de rapports de synthèse mensuels ou de rapports d’activité est une tâche très répétitive qu’il est très pertinent d’automatiser.<br>
+Grâce à <i class="fa-brands fa-r-project" aria-label="r-project"></i> + Quarto il est possible d’automatiser la production de ces documents (éventuellement sous forme de package).</p>
+<p>Grâce à Quarto ces documents peuvent prendre la forme de :</p>
 <ul>
 <li><p>rapports (<i class="fa-solid fa-file-word" aria-label="file-word"></i>, <i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> …),</p></li>
 <li><p>présentations (<i class="fa-solid fa-file-powerpoint" aria-label="file-powerpoint"></i>),</p></li>
 <li><p>dashboards.</p></li>
 </ul>
-</section>
-<section id="bases-de-données" class="level1 page-columns page-full">
-<h1>Bases de données</h1>
+<section id="bases-de-données" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bases-de-données">Bases de données</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
@@ -235,8 +236,8 @@ Grâce à Quarto ces documents peuvent prendre la forme de :</p>
 </div></div><p>Gérant depuis plusieurs années des bases de données naturalistes, je propose aussi de mettre en oeuvre des analyses ‘attaquant’ directement des bases de données <strong>PostgresSQL/PostGIS</strong> ou <strong>DuckDB</strong> (pour plus de vitesse et afin de se débarasser du côté serveur).<br>
 Les requêtes peuvent être effectuer en SQL ou en <i class="fa-brands fa-r-project" aria-label="r-project"></i> selon vos préférences.</p>
 </section>
-<section id="création-de-package" class="level1 page-columns page-full">
-<h1>Création de package</h1>
+<section id="création-de-package" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="création-de-package">Création de package</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
@@ -244,12 +245,13 @@ Les requêtes peuvent être effectuer en SQL ou en <i class="fa-brands fa-r-proj
 <p><img src="./img/hex_adns_h.png" class="quarto-figure quarto-figure-center figure-img" height="150"></p>
 </figure>
 </div>
-</div></div><p>Lorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intègrer dans un <strong>package</strong>.<br>
-Je vous propose donc de créer un package qui rassemblera non seulement toutes les fonctions qui vous sont nécessaires mais aussi une documentation et des tests unitaires.<br>
-Si vous ne disposez pas des connaissances nécessaires au maintien du package une prestation spécifique vous est par ailleur proposée.</p>
-<p><strong>Pour obtenir un devis sur mesure rendez-vous sur la page de <a href="./contact.html">contact</a>.</strong></p>
+</div></div><p>Lorsque la complexité des analyses/rapports/présentations/dashboards s’accroît, il est très vite indispensable de les intégrer dans un <strong>package</strong>.<br>
+Dans ce cas, package qui rassemblera non seulement toutes les fonctions nécessaires mais aussi une documentation et des tests unitaires sera créé.</p>
+<p>Si besoin, une prestation spécifique de maintien du package est aussi proposée.</p>
+<p><strong>Afin d’obtenir un devis sur mesure rendez-vous sur la page de <a href="./contact.html">contact</a>.</strong></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
