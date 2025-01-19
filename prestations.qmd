@@ -27,13 +27,13 @@ cependant être remplacer par **Julia**. \
 Dans la cadre des prestations d'analyse de données, plusieurs scripts R seront 
 fournis pour les différentes étapes de l'analyse :
 
--   **import** des données
+-   **import** des données;
 
--   **nettoyage** et **mise en forme** des données
+-   **nettoyage** et **mise en forme** des données;
 
--   **analyses statistiques** (fréquentistes ou Bayesiennes, multivariées...)
+-   **analyses statistiques** (fréquentistes ou Bayesiennes, multivariées...);
 
--   production de **figures** (graphiques et cartes statiques ou interactives)
+-   production de **figures** (graphiques et cartes statiques ou interactives).
 
 
 
@@ -58,9 +58,9 @@ production de ces documents (éventuellement sous forme de package).
 
 Grâce à Quarto ces documents peuvent prendre la forme de :
 
--   rapports ({{< fa file-word >}}, {{< fa file-pdf >}} ...), 
+-   rapports ({{< fa file-word >}}, {{< fa file-pdf >}} ...);
 
--   présentations ({{< fa file-powerpoint >}}),
+-   présentations ({{< fa file-powerpoint >}});
 
 -   dashboards.   
 

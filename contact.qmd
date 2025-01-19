@@ -15,12 +15,12 @@ format:
 Afin que je puisse voir rapidement si je suis en mesure de satisfaire votre demande, 
 merci de m'adresser un [mail](mailto:lafage.denis@gmail.com) précisant :  
  
- -  l'objet de l'étude
- -  les analyses souhaitées
- -  la taille du jeu de données (en lignes et colonnes)
- -  si possible un extrait du jeu de données
- -  le type de rendu attendu (rapport, dashboard, site web, présentation...)
- -  vos coordonnées (mail, numéro de téléphone)
+ -  l'objet de l'étude;
+ -  les analyses souhaitées;
+ -  la taille du jeu de données (en lignes et colonnes);
+ -  si possible un extrait du jeu de données;
+ -  le type de rendu attendu (rapport, dashboard, site web, présentation...);
+ -  vos coordonnées (mail, numéro de téléphone).
  
 Après étude de votre demande je vous proposerai une visio afin que nous puissions
 définir ensemble la nature exacte de la prestation.
@@ -33,10 +33,10 @@ les droits liés au code et aux données. Un devis détaillé vous sera ensuite
 envoyé.  
 Le devis comprendra :  
 
-- la nature exacte de la prestation
-- le prix de la prestation
+- la nature exacte de la prestation;
+- le prix de la prestation;
 - les engagements de chaque partie, notamment les délais que chacune s'engage à
-tenir
+tenir.
 
 Une annexe fixera les droits qui s'appliqueront au code créé et aux données.
 
