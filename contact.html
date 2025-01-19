@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f431984b8694ec3fc6295025a4f2d777.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -73,11 +73,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="">
 <meta property="og:description" content="Ananlyses de Données Naturalistes Spatialisées">
+<meta property="og:image" content="https://lafagedenis.github.io/ADNS/img/shake_hands.png">
 <meta property="og:locale" content="Fr">
+<meta property="og:image:height" content="322">
+<meta property="og:image:width" content="491">
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="Ananlyses de Données Naturalistes Spatialisées">
+<meta name="twitter:image" content="https://lafagedenis.github.io/ADNS/img/shake_hands.png">
 <meta name="twitter:creator" content="Lafage Denis">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="322">
+<meta name="twitter:image-width" content="491">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -128,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -146,12 +152,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div></div><p>Afin que je puisse voir rapidement si je suis en mesure de satisfaire votre demande, merci de m’adresser un <a href="mailto:lafage.denis@gmail.com">mail</a> précisant :</p>
 <ul>
-<li>l’objet de l’étude</li>
-<li>les analyses souhaitées</li>
-<li>la taille du jeu de données (en lignes et colonnes)</li>
-<li>si possible un extrait du jeu de données</li>
-<li>le type de rendu attendu (rapport, dashboard, site web, présentation…)</li>
-<li>vos coordonnées (mail, numéro de téléphone)</li>
+<li>l’objet de l’étude;</li>
+<li>les analyses souhaitées;</li>
+<li>la taille du jeu de données (en lignes et colonnes);</li>
+<li>si possible un extrait du jeu de données;</li>
+<li>le type de rendu attendu (rapport, dashboard, site web, présentation…);</li>
+<li>vos coordonnées (mail, numéro de téléphone).</li>
 </ul>
 <p>Après étude de votre demande je vous proposerai une visio afin que nous puissions définir ensemble la nature exacte de la prestation.</p>
 </section>
@@ -160,9 +166,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Lors de notre visio, nous affinerons vos demandes afin d’en étudier la faisabilité, de préciser la nature de la prestation et de se mettre d’accord sur les droits liés au code et aux données. Un devis détaillé vous sera ensuite envoyé.<br>
 Le devis comprendra :</p>
 <ul>
-<li>la nature exacte de la prestation</li>
-<li>le prix de la prestation</li>
-<li>les engagements de chaque partie, notamment les délais que chacune s’engage à tenir</li>
+<li>la nature exacte de la prestation;</li>
+<li>le prix de la prestation;</li>
+<li>les engagements de chaque partie, notamment les délais que chacune s’engage à tenir.</li>
 </ul>
 <p>Une annexe fixera les droits qui s’appliqueront au code créé et aux données.</p>
 </section>
@@ -261,8 +267,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -373,7 +377,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
