@@ -28,14 +28,14 @@ comments: false
 ::: column-page
 ## L'entreprise
 
-@DNS vous propose d'analyser vos données naturalistes (qu'elles soient spatiales ou non) et de développer des outils de reporting automatique de ces dernières.\
+@DNS vous propose d'analyser vos données naturalistes et de développer des outils de reporting automatiques de ces dernières.\
 Vous disposez de jeux de données d'inventaires, de suivis ou d'expertises. Vous souhaitez 'nettoyer' ces données, les analyser, automatiser la rédaction de rapports d'analyse. Vous êtes au bon endroit.\
 
 ## Bio
 
 Écologue de formation, je possède un double parcours professionnel de responsable scientifique au sein d'organismes œuvrant pour la protection de la nature et de chercheur en écologie. Ce parcours m'a amené à me spécialiser dans l'analyse et la gestion de données à composantes spatiales.
 
-Sur ce site vous trouverez bien sûr le détail des [prestations](prestations.qmd) proposées mais aussi une liste de [mes publications](papers) et [mon CV](cv.pdf).
+Sur ce site vous trouverez le détail des [prestations](prestations.qmd) proposées,  une liste de [mes publications](papers) et [mon CV](cv.pdf).
 
 <p>
 

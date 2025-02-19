@@ -15,8 +15,8 @@ format:
 :::
 Utilisant depuis près de 15 ans le langage {{< fa brands r-project >}}, ce 
 dernier constitue la pierre angulaire de mon travail. Dans quelques cas 
-particuliers (lorsque les performances deviennent un facteur limitant) il pourra
-cependant être remplacer par **Julia**. \
+particuliers (lorsque les performances deviennent un facteur limitant) il peut
+cependant être remplacé par **Julia**. \
 
 ## Analyse de données
   
@@ -24,8 +24,8 @@ cependant être remplacer par **Julia**. \
 ![](./img/analyses_2.png){fig-align="center"} 
 :::
 
-Dans la cadre des prestations d'analyse de données, plusieurs scripts R seront 
-fournis pour les différentes étapes de l'analyse :
+Dans le cadre des prestations d'analyse de données, plusieurs scripts sont 
+fournis :
 
 -   **import** des données;
 
@@ -43,20 +43,20 @@ fournis pour les différentes étapes de l'analyse :
 il faut faire un package. 
 :::
 
-Ainsi dès que cela sera nécessaire, une **fonction** accompagnée de sa 
-documentation et de ses tests unitaires sera créée afin de simplifier le code et
-de faciliter la réutilisation des scripts par le client. 
-Ceci constitue la prestation minimale proposée.  
-La **création de packages** dédiés est réalisée en option. 
+Ainsi dès que cela est nécessaire, une **fonction** accompagnée de sa 
+documentation et de ses tests unitaires est créée afin de simplifier le code et
+de faciliter la réutilisation des scripts. 
+
+Pour les projets les plus complexes impliquant de multiples fonctions, la 
+**création de packages** dédiés peut être proposée. 
+Si besoin, une prestation spécifique de maintien du package peut être fournie.
 
 ## Automatisation de rapports et dashboards
 
-La réalisation de rapports de synthèse mensuels ou de rapports d'activité est 
-une tâche très répétitive qu'il est très pertinent d'automatiser.  
-Grâce à {{< fa brands r-project >}} + Quarto il est possible d'automatiser la 
-production de ces documents (éventuellement sous forme de package).  
-
-Grâce à Quarto ces documents peuvent prendre la forme de :
+La réalisation de documents de synthèse est une tâche répétitive qu'il est 
+pertinent d'automatiser.  
+Grâce à {{< fa brands r-project >}} + Quarto ces documents peuvent prendre 
+la forme de :
 
 -   rapports ({{< fa file-word >}}, {{< fa file-pdf >}} ...);
 
@@ -70,25 +70,11 @@ Grâce à Quarto ces documents peuvent prendre la forme de :
 ![](./img/pgsql_duckdb.png){fig-align="center"} 
 :::
 
-Gérant depuis plusieurs années des bases de données naturalistes, 
-je propose aussi de mettre en oeuvre des analyses 'attaquant' directement des 
-bases de données **PostgresSQL/PostGIS** ou **DuckDB** (pour plus de vitesse et 
-afin de se débarasser du côté serveur).  
-Les requêtes peuvent être effectuer en SQL ou en {{< fa brands r-project >}} 
+Les observations naturalistes sont de plus en plus souvent stockées dans des bases de
+de données. Des scripts d'analyses 'attaquant' directement ces bases (**PostgresSQL/PostGIS** ou **DuckDB**) peuvent être réalisés.    
+Les requêtes peuvent être effectuées en SQL ou en {{< fa brands r-project >}} 
 selon vos préférences.  
 
-
-## Création de package
-:::{.column-margin}
-![](./img/hex_adns_h.png){fig-align="center" height=150} 
-:::
-
-Lorsque la complexité des analyses/rapports/présentations/dashboards s'accroît, 
-il est très vite indispensable de les intégrer dans un **package**.  
-Dans ce cas, package qui rassemblera non seulement toutes les fonctions 
-nécessaires mais aussi une documentation et des tests unitaires sera créé.  
-
-Si besoin, une prestation spécifique de maintien du package est aussi proposée.  
 
 **Afin d'obtenir un devis sur mesure rendez-vous sur la page de [contact](contact.qmd).**
 

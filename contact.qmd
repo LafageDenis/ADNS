@@ -7,13 +7,12 @@ format:
 
 # Demande de devis {{< fa file-invoice >}}
 
-## Premier contact
 
 ::: {.column-margin}
 ![](./img/shake_hands.png){fig-align="center" height=150} 
 :::
-Afin que je puisse voir rapidement si je suis en mesure de satisfaire votre demande, 
-merci de m'adresser un [mail](mailto:lafage.denis@gmail.com) précisant :  
+Afin de répondre rapidement à votre demande, vous pouvez m'adresser un 
+[mail](mailto:lafage.denis@gmail.com) précisant :  
  
  -  l'objet de l'étude;
  -  les analyses souhaitées;
@@ -22,16 +21,7 @@ merci de m'adresser un [mail](mailto:lafage.denis@gmail.com) précisant :
  -  le type de rendu attendu (rapport, dashboard, site web, présentation...);
  -  vos coordonnées (mail, numéro de téléphone).
  
-Après étude de votre demande je vous proposerai une visio afin que nous puissions
-définir ensemble la nature exacte de la prestation.
-
-## Visio et devis
-
-Lors de notre visio, nous affinerons vos demandes afin d'en étudier la 
-faisabilité, de préciser la nature de la prestation et de se mettre d'accord sur
-les droits liés au code et aux données. Un devis détaillé vous sera ensuite 
-envoyé.  
-Le devis comprendra :  
+ Un devis détaillé vous sera ensuite envoyé. Il comprendra :  
 
 - la nature exacte de la prestation;
 - le prix de la prestation;
@@ -39,6 +29,10 @@ Le devis comprendra :
 tenir.
 
 Une annexe fixera les droits qui s'appliqueront au code créé et aux données.
+ 
+Si nécessaire, une visio pourra être organisée afin de préciser vos besoin en 
+amont du devis.
+
 
 
 # Coordonnées

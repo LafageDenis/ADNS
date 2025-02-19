@@ -17,13 +17,13 @@ website:
   navbar:
     logo: "raw_adns_w.png"
     right:
-      - text: "Home"
+      - text: "Accueil"
         href: index.qmd
       - text: "Prestations"
         href: prestations.qmd
       - text: "Articles scientifiques"
         href: papers
-      - text: "Contact"
+      - text: "Contact et devis"
         href: contact.qmd
         icon: mail
   page-footer:
